@@ -20,8 +20,18 @@ public class LinkedList {
 		this.setLength(0);
 	}
 
-	public void add(Object data) {
-		
+	public boolean isEmpty() {
+		if(this.head != null) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+	
+	public void addToHead(Object data) {
+		Node temp = head;
+		head = new Node(data);
+		head.setNext(temp);		
 	}
 	
 	/**

@@ -6,6 +6,7 @@ public class Node {
 	
 	public Node(Object data) {
 		this.data = data;
+		this.next = null;
 	}
 	
 	/* Get and Set for data */
