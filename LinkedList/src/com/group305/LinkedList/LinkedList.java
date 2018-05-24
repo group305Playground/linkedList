@@ -29,9 +29,18 @@ public class LinkedList {
 	}
 	
 	public void addToHead(Object data) {
-		Node temp = head;
+		Node temp = this.head;
 		head = new Node(data);
 		head.setNext(temp);		
+		this.length++;
+	}
+	
+	public void addToTail(Object data) {
+		Node temp = head;
+		Node ptr = temp;
+		while(ptr.getNext() != null) {
+			ptr = ptr.getNext();
+		}
 	}
 	
 	/**
