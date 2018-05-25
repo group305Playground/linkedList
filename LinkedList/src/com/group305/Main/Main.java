@@ -18,6 +18,17 @@ public class Main {
 		// TODO Auto-generated method stub
 //		System.out.println("Hello World");
 		LinkedList x = new LinkedList();
+		
+		x.addToHead("World");
+		x.addToHead("Hello");
+		System.out.println(x.toString());
+		
+		x.clear();
+		System.out.println(x.toString());
+		x.addToHead("World");
+		x.addToHead("Hello");
+		System.out.println(x.toString());
+		
 	}
 
 }

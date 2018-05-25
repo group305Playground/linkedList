@@ -3,6 +3,8 @@
  */
 package com.group305.LinkedList;
 
+import java.util.*;
+
 
 
 /**
@@ -20,6 +22,10 @@ public class LinkedList {
 		this.setLength(0);
 	}
 
+	public void clear() {
+		this.head = null;
+	}
+	
 	public boolean isEmpty() {
 		if(this.head != null) {
 			return false;
@@ -36,11 +42,12 @@ public class LinkedList {
 	}
 	
 	public void addToTail(Object data) {
-		Node temp = head;
-		Node ptr = temp;
-		while(ptr.getNext() != null) {
-			ptr = ptr.getNext();
-		}
+		Node temp = this.head;
+		while(temp.getNext() != null) {
+			temp = temp.getNext();
+		}		
+		temp.setNext(new Node(data));
+		this.length++;
 	}
 	
 	/**
@@ -71,5 +78,21 @@ public class LinkedList {
 		this.length = length;
 	}
 	
-	
+	public String toString() {
+		String output = "";
+		
+		Node temp = this.head;
+		if(!this.isEmpty()) {
+			while(temp.getNext() != null) {				
+				output += '[' + temp.getData().toString() + ']' + "->";
+				temp = temp.getNext();
+			}		
+			output += '[' + temp.getData().toString() + ']';
+		} else {
+			output = "[]";
+		}
+
+		
+		return output;
+	}	
 }
