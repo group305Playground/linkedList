@@ -90,9 +90,7 @@ public class LinkedList {
 			output += '[' + temp.getData().toString() + ']';
 		} else {
 			output = "[]";
-		}
-
-		
+		}		
 		return output;
 	}	
 }
